@@ -1,0 +1,17 @@
+{
+  "$schema": "https://hanui.io/schema.json",
+  "style": "default",
+  "tailwind": {
+    "config": "",
+    "css": "src/app/globals.css",
+    "baseColor": "slate",
+    "cssVariables": true,
+    "version": 4
+  },
+  "aliases": {
+    "components": "@/components/hanui",
+    "utils": "@/lib/utils",
+    "ui": "@/components/hanui",
+    "lib": "@/lib"
+  }
+}
