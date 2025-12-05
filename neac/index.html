@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국민경제자문회의 - 시안 1</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f4f8',
+              100: '#d9e2ec',
+              200: '#bcccdc',
+              300: '#9fb3c8',
+              400: '#829ab1',
+              500: '#627d98',
+              600: '#486581',
+              700: '#334e68',
+              800: '#1B3A57',
+              900: '#102a43',
+            },
+            accent: {
+              50: '#fdf8f3',
+              100: '#faecd8',
+              200: '#f5d9b0',
+              300: '#e9c07a',
+              400: '#C4A35A',
+              500: '#a88b4a',
+              600: '#8c7340',
+              700: '#6f5b35',
+              800: '#52432a',
+              900: '#352c1f',
+            }
+          },
+          fontFamily: {
+            sans: ['Pretendard', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    }
+    .gradient-hero {
+      background: linear-gradient(135deg, #1B3A57 0%, #102a43 50%, #1a365d 100%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    .accent-gradient {
+      background: linear-gradient(135deg, #C4A35A 0%, #e9c07a 100%);
+    }
+    .pattern-bg {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .data-card {
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+    @media (max-width: 1024px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+      }
+    }
+    .slide-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .slide-indicator .current {
+      font-weight: 700;
+    }
+    .slide-indicator .line {
+      width: 60px;
+      height: 1px;
+      background: rgba(255,255,255,0.3);
+    }
+    .slide-indicator .total {
+      opacity: 0.5;
+    }
+    .hero-right-card {
+      background: linear-gradient(180deg, rgba(27,58,87,0.95) 0%, rgba(16,42,67,0.98) 100%);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Skip Navigation -->
+  <div class="sr-only">
+    <a href="#main-content">본문 바로가기</a>
+    <a href="#gnb">주요메뉴 바로가기</a>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="bg-primary-900 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
+      <span class="text-primary-200">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-primary-200 hover:text-white transition">로그인</a>
+        <a href="#" class="text-primary-200 hover:text-white transition">회원가입</a>
+        <div class="flex items-center gap-2 ml-4">
+          <a href="#" class="text-white font-medium">KR</a>
+          <span class="text-primary-400">|</span>
+          <a href="#" class="text-primary-300 hover:text-white transition">EN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-primary-800 rounded-lg flex items-center justify-center">
+            <svg class="w-8 h-8 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-primary-800">국민경제자문회의</h1>
+            <p class="text-xs text-gray-500">National Economic Advisory Council</p>
+          </div>
+        </a>
+
+        <!-- Navigation -->
+        <nav id="gnb" class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-700 hover:text-primary-800 font-medium transition">기관소개</a>
+          <a href="#" class="text-gray-700 hover:text-primary-800 font-medium transition">자문회의활동</a>
+          <a href="#" class="text-gray-700 hover:text-primary-800 font-medium transition">자료실</a>
+          <a href="#" class="text-gray-700 hover:text-primary-800 font-medium transition">소식</a>
+          <a href="#" class="text-gray-700 hover:text-primary-800 font-medium transition">참여마당</a>
+        </nav>
+
+        <!-- Search -->
+        <div class="flex items-center gap-4">
+          <div class="relative">
+            <input type="text" placeholder="검색어를 입력하세요"
+                   class="w-64 pl-4 pr-10 py-2.5 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition">
+            <button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary-600 transition">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+            </button>
+          </div>
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden p-2 text-gray-600 hover:text-primary-800">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Section - 권위있는 정부기관 스타일 -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-5 gap-12 items-center">
+
+          <!-- Left: 메인 슬로건 (3컬럼) -->
+          <div class="lg:col-span-3">
+            <div class="mb-8">
+              <p class="text-primary-600 font-medium mb-4">National Economic Advisory Council</p>
+              <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                국민경제의 미래를<br>
+                <span class="text-primary-800">함께</span> 설계합니다
+              </h2>
+              <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">
+                국민경제자문회의는 대통령의 자문기관으로서 경제 분야 전문가들의 심층적인 자문을 통해 국가 경제정책 수립에 기여하고 있습니다.
+              </p>
+            </div>
+
+            <!-- 핵심 수치 (꼰대 어필) -->
+            <div class="flex flex-wrap gap-8 pt-8 border-t border-gray-100">
+              <div>
+                <p class="text-3xl font-bold text-primary-800">1999</p>
+                <p class="text-sm text-gray-500 mt-1">설립연도</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-primary-800">127<span class="text-lg">회</span></p>
+                <p class="text-sm text-gray-500 mt-1">자문회의 개최</p>
+              </div>
+              <div>
+                <p class="text-3xl font-bold text-primary-800">15<span class="text-lg">인</span></p>
+                <p class="text-sm text-gray-500 mt-1">자문위원</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 핵심 바로가기 (2컬럼) -->
+          <div class="lg:col-span-2 space-y-4">
+            <!-- 부의장 카드 -->
+            <a href="#" class="block p-6 bg-primary-800 rounded-xl text-white hover:bg-primary-700 transition group">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-primary-200 text-sm mb-1">Vice Chairman</p>
+                  <p class="text-xl font-bold">부의장 환영인사</p>
+                  <p class="text-primary-300 text-sm mt-2">국민경제의 미래를 함께 설계합니다</p>
+                </div>
+                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white/20 transition">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- 자문위원 카드 -->
+            <a href="#" class="block p-6 bg-gray-50 border border-gray-100 rounded-xl hover:bg-gray-100 hover:border-gray-200 transition group">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-gray-400 text-sm mb-1">Advisory Members</p>
+                  <p class="text-xl font-bold text-gray-900">자문위원 소개</p>
+                  <p class="text-gray-500 text-sm mt-2">경제 분야 전문가 15인</p>
+                </div>
+                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center group-hover:bg-primary-200 transition">
+                  <svg class="w-6 h-6 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+
+            <!-- 기관소개 카드 -->
+            <a href="#" class="block p-6 bg-gray-50 border border-gray-100 rounded-xl hover:bg-gray-100 hover:border-gray-200 transition group">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-gray-400 text-sm mb-1">About NEAC</p>
+                  <p class="text-xl font-bold text-gray-900">기관소개</p>
+                  <p class="text-gray-500 text-sm mt-2">설치근거, 기능, 연혁</p>
+                </div>
+                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center group-hover:bg-primary-200 transition">
+                  <svg class="w-6 h-6 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Access - Two Track -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- 대국민 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition group">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center group-hover:bg-primary-800 transition">
+                <svg class="w-7 h-7 text-primary-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">쉽게 보는 경제정책</h3>
+                <p class="text-gray-500 mb-4">카드뉴스, 인포그래픽으로 경제 이슈를 쉽게 이해해보세요.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full">카드뉴스</span>
+                  <span class="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full">인포그래픽</span>
+                  <span class="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full">영상</span>
+                </div>
+              </div>
+              <svg class="w-6 h-6 text-gray-300 group-hover:text-primary-600 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- 전문가 -->
+          <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition group">
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-accent-100 rounded-xl flex items-center justify-center group-hover:bg-accent-400 transition">
+                <svg class="w-7 h-7 text-accent-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">전문 자료실</h3>
+                <p class="text-gray-500 mb-4">회의록, 보고서, 연구자료를 검색하고 다운로드하세요.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-3 py-1 bg-accent-50 text-accent-700 text-sm rounded-full">회의록</span>
+                  <span class="px-3 py-1 bg-accent-50 text-accent-700 text-sm rounded-full">보고서</span>
+                  <span class="px-3 py-1 bg-accent-50 text-accent-700 text-sm rounded-full">통계</span>
+                </div>
+              </div>
+              <svg class="w-6 h-6 text-gray-300 group-hover:text-accent-500 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-8">
+
+          <!-- 주요활동 - Large Card -->
+          <div class="lg:col-span-2">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">주요활동</h2>
+              <a href="#" class="text-primary-600 hover:text-primary-800 font-medium flex items-center gap-1 transition">
+                더보기
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Featured Item -->
+            <div class="bg-gradient-to-br from-primary-800 to-primary-900 rounded-2xl p-8 mb-6 text-white">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="px-3 py-1 bg-accent-400 text-primary-900 text-sm font-medium rounded-full">합동회의</span>
+                <span class="text-primary-300 text-sm">2024.11.19</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-3">2024년 국민경제자문회의 합동회의</h3>
+              <p class="text-primary-200 mb-6">경제 현안 점검 및 2025년 경제정책 방향 논의</p>
+              <a href="#" class="inline-flex items-center gap-2 text-accent-400 hover:text-accent-300 font-medium transition">
+                자세히 보기
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Activity List -->
+            <div class="space-y-4">
+              <a href="#" class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-primary-50 transition group">
+                <div class="w-16 text-center">
+                  <div class="text-2xl font-bold text-primary-800">08</div>
+                  <div class="text-sm text-gray-500">2024.11</div>
+                </div>
+                <div class="flex-1">
+                  <span class="text-xs text-primary-600 font-medium">현장방문</span>
+                  <h4 class="font-medium text-gray-900 group-hover:text-primary-800 transition">중소기업중앙회 현장방문 및 간담회</h4>
+                </div>
+                <svg class="w-5 h-5 text-gray-300 group-hover:text-primary-600 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+              <a href="#" class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-primary-50 transition group">
+                <div class="w-16 text-center">
+                  <div class="text-2xl font-bold text-primary-800">16</div>
+                  <div class="text-sm text-gray-500">2024.10</div>
+                </div>
+                <div class="flex-1">
+                  <span class="text-xs text-primary-600 font-medium">분과회의</span>
+                  <h4 class="font-medium text-gray-900 group-hover:text-primary-800 transition">2기 10차 민생경제 분과회의</h4>
+                </div>
+                <svg class="w-5 h-5 text-gray-300 group-hover:text-primary-600 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+
+              <a href="#" class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-primary-50 transition group">
+                <div class="w-16 text-center">
+                  <div class="text-2xl font-bold text-primary-800">10</div>
+                  <div class="text-sm text-gray-500">2024.10</div>
+                </div>
+                <div class="flex-1">
+                  <span class="text-xs text-primary-600 font-medium">분과회의</span>
+                  <h4 class="font-medium text-gray-900 group-hover:text-primary-800 transition">2기 10차 거시금융 분과회의</h4>
+                </div>
+                <svg class="w-5 h-5 text-gray-300 group-hover:text-primary-600 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Sidebar -->
+          <div class="space-y-8">
+            <!-- 기고/인터뷰 -->
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-bold text-gray-900">기고/인터뷰</h2>
+                <a href="#" class="text-gray-400 hover:text-primary-600 transition">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="space-y-3">
+                <a href="#" class="block p-4 bg-gray-50 rounded-xl hover:bg-primary-50 transition group">
+                  <div class="text-xs text-gray-400 mb-1">2024.11.27</div>
+                  <h4 class="text-sm font-medium text-gray-800 group-hover:text-primary-800 line-clamp-2">[기고] 슈퍼 선거의 해를 지나며 - 민세진 위원</h4>
+                </a>
+                <a href="#" class="block p-4 bg-gray-50 rounded-xl hover:bg-primary-50 transition group">
+                  <div class="text-xs text-gray-400 mb-1">2024.11.18</div>
+                  <h4 class="text-sm font-medium text-gray-800 group-hover:text-primary-800 line-clamp-2">[기고] 준비 안된 트럼프 2.0 시대 - 강인수 위원</h4>
+                </a>
+                <a href="#" class="block p-4 bg-gray-50 rounded-xl hover:bg-primary-50 transition group">
+                  <div class="text-xs text-gray-400 mb-1">2024.11.14</div>
+                  <h4 class="text-sm font-medium text-gray-800 group-hover:text-primary-800 line-clamp-2">[기고] 더욱 중요해진 사회서비스 - 조상미 위원</h4>
+                </a>
+              </div>
+            </div>
+
+            <!-- 공지사항 -->
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-bold text-gray-900">공지사항</h2>
+                <a href="#" class="text-gray-400 hover:text-primary-600 transition">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="space-y-3">
+                <a href="#" class="block p-4 border border-gray-100 rounded-xl hover:border-primary-200 hover:bg-primary-50/50 transition group">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2 py-0.5 bg-red-100 text-red-600 text-xs font-medium rounded">채용</span>
+                    <span class="text-xs text-gray-400">2024.06.04</span>
+                  </div>
+                  <h4 class="text-sm font-medium text-gray-800 group-hover:text-primary-800 line-clamp-2">국민경제자문회의지원단 체험형 행정인턴 채용 공고</h4>
+                </a>
+                <a href="#" class="block p-4 border border-gray-100 rounded-xl hover:border-primary-200 hover:bg-primary-50/50 transition group">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2 py-0.5 bg-blue-100 text-blue-600 text-xs font-medium rounded">공지</span>
+                    <span class="text-xs text-gray-400">2024.03.27</span>
+                  </div>
+                  <h4 class="text-sm font-medium text-gray-800 group-hover:text-primary-800 line-clamp-2">국민경제자문회의지원단 기간제근로자 채용 공고</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links - Icon Cards -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-2xl font-bold text-gray-900 text-center mb-10">바로가기</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <a href="#" class="flex flex-col items-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition group">
+            <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-800 transition">
+              <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-1">부의장</h3>
+            <p class="text-sm text-gray-500">환영인사 및 프로필</p>
+          </a>
+
+          <a href="#" class="flex flex-col items-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition group">
+            <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-800 transition">
+              <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-1">자문위원</h3>
+            <p class="text-sm text-gray-500">위원 소개 및 활동</p>
+          </a>
+
+          <a href="#" class="flex flex-col items-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition group">
+            <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-800 transition">
+              <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-1">지원단</h3>
+            <p class="text-sm text-gray-500">조직 및 연락처</p>
+          </a>
+
+          <a href="#" class="flex flex-col items-center p-8 bg-white rounded-2xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition group">
+            <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary-800 transition">
+              <svg class="w-8 h-8 text-primary-600 group-hover:text-white transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-gray-900 mb-1">오시는 길</h3>
+            <p class="text-sm text-gray-500">위치 및 교통안내</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Sites -->
+    <section class="py-12 bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-wrap items-center justify-center gap-8 opacity-60 hover:opacity-100 transition">
+          <span class="text-sm text-gray-500 font-medium">관련기관</span>
+          <a href="#" class="text-gray-400 hover:text-primary-600 font-medium transition">기획재정부</a>
+          <a href="#" class="text-gray-400 hover:text-primary-600 font-medium transition">한국은행</a>
+          <a href="#" class="text-gray-400 hover:text-primary-600 font-medium transition">금융위원회</a>
+          <a href="#" class="text-gray-400 hover:text-primary-600 font-medium transition">한국개발연구원</a>
+          <a href="#" class="text-gray-400 hover:text-primary-600 font-medium transition">대외경제정책연구원</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary-900 text-white">
+    <div class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <!-- Logo & Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <span class="text-lg font-bold">국민경제자문회의</span>
+          </div>
+          <p class="text-primary-300 text-sm leading-relaxed mb-4">
+            (03154) 서울특별시 종로구 종로1 광화문교보빌딩 20층<br>
+            대표번호: 02-731-2445 | 팩스: 02-731-2448
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">정책정보</h4>
+          <ul class="space-y-2 text-sm text-primary-300">
+            <li><a href="#" class="hover:text-white transition">개인정보처리방침</a></li>
+            <li><a href="#" class="hover:text-white transition">저작권정책</a></li>
+            <li><a href="#" class="hover:text-white transition">이메일무단수집거부</a></li>
+            <li><a href="#" class="hover:text-white transition">사이트맵</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">고객지원</h4>
+          <ul class="space-y-2 text-sm text-primary-300">
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition">문의하기</a></li>
+            <li><a href="#" class="hover:text-white transition">오시는 길</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+        <p class="text-sm text-primary-400">
+          &copy; 2024 National Economic Advisory Council. All rights reserved.
+        </p>
+        <div class="flex items-center gap-4">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='30' viewBox='0 0 80 30'%3E%3Crect fill='%23ffffff' fill-opacity='0.2' width='80' height='30' rx='4'/%3E%3Ctext x='40' y='19' text-anchor='middle' fill='%23ffffff' font-size='10' font-family='sans-serif'%3EWA 인증%3C/text%3E%3C/svg%3E" alt="웹 접근성 인증마크" class="h-8">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="fixed bottom-8 right-8 w-12 h-12 bg-primary-800 text-white rounded-full shadow-lg hover:bg-primary-700 transition flex items-center justify-center">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+</body>
+</html>
